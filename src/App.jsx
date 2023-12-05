@@ -30,9 +30,7 @@ function App() {
     setProjectState((prevState) => {
       return {
         ...prevState,
-        tasks: prevState.tasks.filter(
-          (task) => task.id !== id
-        ),
+        tasks: prevState.tasks.filter((task) => task.id !== id),
       };
     });
   }
@@ -118,6 +116,7 @@ function App() {
         onSelectProject={handleSelectProject}
         projects={projectState.projects}
         onStartAddProject={handleStartAddProject}
+        selectedProjectId={projectState.SelectedProjectId}
       />
 
       {content}
